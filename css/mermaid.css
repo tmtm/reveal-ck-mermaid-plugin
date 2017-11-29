@@ -1,0 +1,12 @@
+div.mermaid text.actor {
+    font-size: 25px;
+}
+div.mermaid text.messageText {
+    font-size: 20px;
+}
+div.mermaid text.labelText tspan {
+    font-size: 15px;
+}
+div.mermaid text.loopText tspan {
+    font-size: 15px;
+}
