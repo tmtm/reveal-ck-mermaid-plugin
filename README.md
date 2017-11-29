@@ -1,35 +1,29 @@
-# Reveal::Ck::Mermaid::Plugin
+# reveal-ck-mermaid-plugin
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/reveal/ck/mermaid/plugin`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This is a plugin that can easily use mermaid with reveal-ck.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'reveal-ck-mermaid-plugin'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install reveal-ck-mermaid-plugin
+    % gem install reveal-ck-mermaid-plugin
 
 ## Usage
 
-TODO: Write usage instructions here
+    % mkdir foo
+    % cd foo
+    % touch slides.md
+    % reveal-ck-mermaid-plugin
+    % reveal-ck generate
 
-## Development
+in slides.md:
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+    ```mermaid
+    sequenceDiagram
+        Client -->> Server: Connection
+        Server ->> Client: Initial
+        Client ->> Server: Authentication
+        Server ->> Client: OK
+    ```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/reveal-ck-mermaid-plugin.
+Bug reports and pull requests are welcome on GitHub at https://github.com/tmtm/reveal-ck-mermaid-plugin.

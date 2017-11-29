@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+require 'fileutils'
+
+unless File.exist? 'slides.md'
+  $stderr.puts "can not find slides.md"
+  exit 1
+end
+
+['css', 'plugin/mermaid', 'js'].each do |dir|
+  FileUtils.mkdir_p dir
+end
+FileUtils.cp(File.expand_path('../css/mermaid.css', __dir__), 'css')
+FileUtils.cp(File.expand_path('../plugin/mermaid.js', __dir__), 'plugin/mermaid')
+FileUtils.cp(File.expand_path('../mermaid/mermaid.min.js', __dir__), 'js')
